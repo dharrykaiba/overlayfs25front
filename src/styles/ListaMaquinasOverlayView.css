@@ -1,0 +1,28 @@
+/* src/styles/ListaMaquinasOverlayView.css */
+
+.overlay {
+  position: absolute; /* ✅ para que el contenido pueda empujar la página */
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100dvh; /* ✅ crece si hay más contenido */
+  z-index: 9999;
+
+  pointer-events: none; /* puedes quitar esto si necesitas interacción */
+}
+
+
+.inner-box {
+  position: absolute;
+  overflow: hidden;
+  max-width: 100%;
+  max-height: 100%;
+  box-sizing: border-box;
+
+  user-select: none;
+  pointer-events: none;
+
+  border-radius: 8px;
+  
+  /* background-color: #111;  O cualquier color por defecto */
+}

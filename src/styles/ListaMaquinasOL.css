@@ -1,0 +1,122 @@
+/* src/styles/ListaMaquinasOL.css */
+
+.overlay-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.overlay-detalle-container {
+  display: flex;
+  gap: 0.75rem; /* espacio entre marca y precio */
+  align-items: center;
+}
+
+.overlay-error {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
+
+.overlay-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.overlay-item {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  border-radius: 0;
+  overflow: hidden;
+  background: none;
+  border: none;
+}
+
+.overlay-img-container {
+  padding: 40px; /* Aumentado */
+  box-sizing: border-box;
+  position: relative;
+}
+.overlay-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+
+  /* Múltiples sombras combinadas */
+  filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.3))
+    drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4))
+    drop-shadow(-2px -2px 2px rgba(0, 0, 0, 0.25))
+    drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.6));
+}
+
+.overlay-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  text-align: left;
+  background: none;
+  pointer-events: none;
+
+  display: flex;
+  flex-direction: column; /* 📌 apilar verticalmente */
+}
+
+/* TÍTULO con fondo blanco, borde negro y sombra difuminada */
+.overlay-nombre {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
+  color: white;
+  background: none;
+  padding: 0;
+  display: inline-block;
+
+  /* Borde nítido */
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2); /* negro suave */
+
+  /* Desenfoque difuso como si fuera Gaussian Blur */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6), 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* DETALLES opcionales con mismo efecto */
+.overlay-detalle {
+  margin: 0.2rem 0 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background: none;
+  padding: 0;
+  display: block; /* 📌 fuerza a ocupar toda la línea */
+  -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  animation: fadeInOut 10s ease-in-out forwards;
+  opacity: 0; /* inicio */
+}

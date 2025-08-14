@@ -1,0 +1,74 @@
+.catalogo-container {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--catalogo-bg, transparent);
+}
+
+/* Mensaje de error */
+.catalogo-error {
+  color: #d9534f;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Bloque por cada categoría */
+.catalogo-grupo {
+  margin-bottom: 25px; /* Espacio entre categorías */
+}
+
+/* Subtítulo de la categoría */
+.catalogo-subtitulo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin: 15px 0 8px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Grid de vehículos */
+.catalogo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 8px;
+}
+
+/* Tarjeta de cada vehículo */
+.catalogo-item {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: white;
+  padding: 6px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.catalogo-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen del vehículo */
+.catalogo-img {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Información debajo de la imagen */
+.catalogo-info {
+  margin-top: 4px;
+}
+
+.catalogo-nombre {
+  font-size: 12px;
+  font-weight: bold;
+  color: #222;
+}
+
+.catalogo-detalle {
+  font-size: 10px;
+  color: #555;
+}
