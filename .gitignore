@@ -5,7 +5,7 @@
 /.pnp
 .pnp.js
 .env
-/build/logos/
+/public/logos/
 /build
 
 # testing
