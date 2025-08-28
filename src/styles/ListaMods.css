@@ -1,0 +1,85 @@
+/* src/styles/ListaMods.css */
+.mods-container {
+  margin: 20px auto;
+  padding: 15px;
+  max-width: 100%;
+  overflow-x: auto; /* ✅ permite scroll horizontal si se pasa */
+  background: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
+  color: #e0e0e0;
+}
+
+/* Título */
+.mods-container h3 {
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* Tabla */
+.mods-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  overflow: hidden;
+  table-layout: fixed; /* ✅ controla tamaños */
+}
+
+.mods-table th,
+.mods-table td {
+  padding: 8px 10px;
+  text-align: left;
+  border: 1px solid #333;
+  font-size: 0.9rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Encabezados */
+.mods-table th {
+  background-color: #333;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Filas */
+.mods-table tr:nth-child(even) {
+  background-color: #252525;
+}
+
+.mods-table tr:nth-child(odd) {
+  background-color: #1e1e1e;
+}
+
+.mods-table tr:hover {
+  background-color: #3a3a3a;
+  transition: background 0.2s ease-in-out;
+}
+
+/* Imagen */
+.mod-icon {
+  width: 64px;  /* ✅ tamaño fijo */
+  height: 64px;
+  object-fit: contain;
+  border-radius: 6px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Columna hash */
+.hash-cell {
+  font-family: monospace;
+  font-size: 0.8em;
+  color: #9acdff;
+  word-break: break-all;
+}
+
+/* Descripción (ajustamos altura del texto) */
+.desc-cell {
+  max-height: 3.6em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

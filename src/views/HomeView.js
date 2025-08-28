@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import CatalogoVehiculos from "../componets/CatalogoVehiculos";
+import ListaMods from "../componets/ListaMods";
 import "../styles/HomeView.css";
 
 export default function HomeView() {
@@ -65,6 +66,9 @@ export default function HomeView() {
             className="config-input"
           />
         </label>
+      </div>
+      <div className="mods-wrapper">
+        <ListaMods savegameId={4} />
       </div>
 
       {partida && (

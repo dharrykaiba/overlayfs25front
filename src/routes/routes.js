@@ -7,6 +7,7 @@ import OverlayID from "../views/OverlayID.js";
 import OverlayEditorView from "../views/OverlayEditorView.js";
 import OverlayMaquinas from "../views/OverlayMaquinas.js";
 
+
 const AppRouter = () => {
   return (
     <Routes>
@@ -15,6 +16,7 @@ const AppRouter = () => {
       <Route path="/overlayid/:id" element={<OverlayID />} />{" "}
       <Route path="/editor" element={<OverlayEditorView />} />
       <Route path="/overlay-maquinas/:savegameId" element={<OverlayMaquinas />} />
+      
     </Routes>
   );
 };
